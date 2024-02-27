@@ -10,6 +10,7 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 
 app.get('/comment', (req, res) => {
+    
     fs.readFile('comment.json', 'utf8', (err, data) => {
         res.send(data);
     });
